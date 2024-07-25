@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #004d4d;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-theme .header, body.light-theme .footer {
+    color: #000;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+.toggle-container {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.theme-toggle {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    color: #00cccc;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 5px;
+    transition: all .2s linear;
+}
+
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+    font-size: 27px;
+    color: #fff;
+    background-color: #29aafe;
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-icons a.whatsapp:hover {
+    background-color: #2ebe35;
+}
+
+.social-icons a.instagram:hover {
+    background: linear-gradient(45deg, 
+                                #0037FF, 
+                                #5865F2, 
+                                #833AB4, 
+                                #C13584, 
+                                #E1306C, 
+                                #F56040, 
+                                #FCAF45, 
+                                #FFDC80);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.button-container button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #20B2AA;
+    border-radius: 12px;
+    background: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #20B2AA;
+    color: #fff;
+}
+
+body.light-theme .button-container button {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    color: #000;
+}
+
+body.light-theme .button-container button:hover {
+    background-color: #20B2AA;
+    color: #fff;
+}
+
+.footer {
+    background-color: #004d4d;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+body.light-theme .footer {
+    background-color: #f0f0f0;
+    color: #000;
+}
