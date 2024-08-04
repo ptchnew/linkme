@@ -572,12 +572,21 @@ body {
    background-color: #08bab2;
    color: black;
 }
+
+.akhir {
+  text-align: center;
+  font-weight: 10px;
+  font-style: oblique 40deg;
+}
+
 .akhir a {
   color: inherit;
 }
+
 .akhir a:hover {
   color: #18a2a2;
 }
+
 @media (min-width: 768px) and (max-width: 1199px) {
 .background {
    background: black;
@@ -589,6 +598,7 @@ body {
     max-width: 2000px;
 }
 }
+
 @media (min-width: 1200px) {
   .background {
    background: black;
