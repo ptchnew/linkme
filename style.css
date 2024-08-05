@@ -4,6 +4,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 @keyframes move {
     100% {
@@ -637,6 +638,24 @@ body {
 .akhir a:hover {
   color: #18a2a2;
 }
+.title{
+    text-align: center;
+    margin: 0 auto 10px;
+    position: relative;
+    line-height: 40px;
+    color: #ddd;
+}
+.title::after{
+    content: '';
+    background: #198488;
+    width: 100px;
+    height: 3px;
+    border-radius: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 @media (min-width: 768px) and (max-width: 1199px) {
 .background {
    background: black;
@@ -659,21 +678,186 @@ body {
     max-width: 2000px;
 }
 }
-.title{
-    text-align: center;
-    margin: 0 auto 10px;
-    position: relative;
-    line-height: 40px;
-    color: #ddd;
-}
-.title::after{
-    content: '';
-    background: #198488;
-    width: 100px;
-    height: 3px;
-    border-radius: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
+        .share-button {
+          position: absolute;
+            cursor: pointer;
+            background-color: #eceeef;
+            font-size: 20px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            color: #238b8b;
+            height: 44px;
+            text-align: center;
+            margin: 20px 20px;
+            border-radius: 100px;
+            transition: all .2s linear;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 60%;
+            color: #000;
+            text-align: center;
+        }
+
+        .close {
+           list-style: none;
+            color: #555;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .content-section {
+            display: flex;
+    justify-content: space-around; /* adjust spacing */
+    align-items: center; /* ensures vertical alignment */
+    padding: 10px 0; /* adds some padding for spacing */
+        }
+
+        .qr-code {
+            width: auto;
+            padding: 10px;
+            
+        }
+
+        .share-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 30%;
+        }
+
+        .share-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .share-link img {
+            width: 25px;
+            margin-right: 20px;
+            border: 1px solid #555;
+            border-radius: 100px;
+            padding: 5px;
+        }
+        .copy-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .copy-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .copy-button {
+            width: 15%;
+            background-color: #1e686b;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+              
+                flex-direction: column;
+            }
+
+            .qr-code {
+                width: 100%;
+                padding: 10px;
+            }
+            .share-links {
+              width: 100%;
+              white-space: nowrap;
+              margin: 20px;
+            }
+
+            .copy-input {
+                width: 65%;
+            }
+
+            .copy-button {
+                width: 30%;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {        
+          .content-section {
+              flex-direction: row;
+              justify-content: space-around;
+             align-items: center;
+            
+            }
+            .qr-code {
+                width: 25%;
+            }
+            .share-links {
+              width: auto;
+              white-space: nowrap;
+            }
+
+            .copy-input {
+                width: 65%;
+            }
+
+            .copy-button {
+                width: 30%;
+            }
+        }
+        @media (min-width: 1200px) {
+        .content-section {
+             display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+             align-items: center;
+            margin: 0 auto;
+            padding: 0;
+            }
+            .qr-code {
+                width: 20%;
+            }
+            .share-links{
+              width: auto;
+              white-space: nowrap;
+            }
+
+            .copy-input {
+                width: 65%;
+            }
+
+            .copy-button {
+                width: 30%;
+            }
+        }
