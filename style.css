@@ -489,7 +489,8 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
+    text-align: center
+
 }
 
 .header {
@@ -504,7 +505,7 @@ body {
 }
 
 .social-icons {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .social-icons a {
@@ -546,31 +547,83 @@ body {
                                 #FCAF45, 
                                 #FFDC80);
 }
-
+        .product-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 10px;
+        }
+        .product-card {
+            background-color: transparent;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            min-height: 150px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #1f7e83;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-name {
+          color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+            white-space: nowarp;
+        }
+        .product-price {
+            color: #a9b6bc;
+            margin-bottom: 15px;
+            white-space: nowarp;
+        }
+        .order-button {
+            background-color: #28a793;
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .order-button:hover {
+            background-color: #28a793;
+        }
 .button-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 500px;
+    margin: 0 auto; 
 }
 
-.button-container button {
-    width: 100%;
-    max-width: 400px;
+.custom-button {
+    width: 48%;
+    margin-bottom: 10px;
     padding: 10px;
-    border: 2px solid #20B2AA;
-    border-radius: 12px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
     background: none;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    border: 2px solid #20B2AA;
+    border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.button-container button:hover {
-   background-color: #08bab2;
-   color: black;
+.custom-button:hover {
+    background-color: #08bab2;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .custom-button {
+        width: 100%;
+        max-width: 400px; 
+    }
 }
 
 .akhir {
@@ -578,15 +631,12 @@ body {
   font-weight: 10px;
   font-style: oblique 40deg;
 }
-
 .akhir a {
   color: inherit;
 }
-
 .akhir a:hover {
   color: #18a2a2;
 }
-
 @media (min-width: 768px) and (max-width: 1199px) {
 .background {
    background: black;
@@ -598,7 +648,6 @@ body {
     max-width: 2000px;
 }
 }
-
 @media (min-width: 1200px) {
   .background {
    background: black;
@@ -609,4 +658,22 @@ body {
 .button-container button {
     max-width: 2000px;
 }
+}
+.title{
+    text-align: center;
+    margin: 0 auto 10px;
+    position: relative;
+    line-height: 40px;
+    color: #ddd;
+}
+.title::after{
+    content: '';
+    background: #198488;
+    width: 100px;
+    height: 3px;
+    border-radius: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
