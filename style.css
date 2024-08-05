@@ -681,7 +681,7 @@ body {
         .share-button {
           position: absolute;
             cursor: pointer;
-            background-color: #eceeef;
+            background-color: transparent;
             font-size: 20px;
             display: inline-block;
             line-height: 44px;
@@ -690,9 +690,15 @@ body {
             height: 44px;
             text-align: center;
             margin: 20px 20px;
+            border: 1px solid #1a5b5e;
             border-radius: 100px;
             transition: all .2s linear;
         }
+
+       .share-button:hover {
+          background: white;
+       }
+
         .modal {
             display: none;
             position: fixed;
@@ -706,6 +712,7 @@ body {
         }
 
         .modal-content {
+            border-radius: 10px 50px 50px;
             background-color: #fefefe;
             margin: 5% auto;
             padding: 30px;
