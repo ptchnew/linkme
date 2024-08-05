@@ -75,6 +75,37 @@
    <span></span>
    <span></span>
    <span></span>
+  <div class="share-button" onclick="openShareModal()">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </div>
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <li class="close" onclick="closeShareModal()">&times;</li>
+            <p>Share This My Bio Link</p>
+            <hr>
+            <div class="content-section">
+                <img src="https://raw.githubusercontent.com/ptchnew/linkme/main/Images/Untitled.png" alt="QR Code" class="qr-code">
+                <div class="share-links">
+                    <a href="https://twitter.com/intent/tweet?url=https://my.isppaintechidn.cloud" target="_blank" class="share-link">
+                        <img src="Images/twitter.png" alt="Twitter">
+                        Share on Twitter
+                    </a>
+                    <a href="https://www.facebook.com/sharer.php?u=https://my.isppaintechidn.cloud" target="_blank" class="share-link">
+                        <img src="Images/facebook.png" alt="Facebook">
+                        Share on Facebook
+                    </a>
+                    <a href="https://telegram.me/share/url?url=https://my.isppaintechidn.cloud&text=Check out this link" target="_blank" class="share-link">
+                        <img src="Images/telegram.png" alt="Telegram">
+                        Share on Telegram
+                    </a>
+                </div>
+            </div>
+            <div class="copy-section">
+                <input type="text" value="https://my.isppaintechidn.cloud" id="myInput" class="copy-input" readonly>
+                <button onclick="copyLink()" class="copy-button">Copy</button>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="header">
             <img src="Images/pain.jpg" alt="Profile Picture" class="profile-pic">
@@ -119,11 +150,27 @@
     <button class="custom-button" onclick="window.location.href='https://t.me/channelpaintech'">TELE CHANNEL</button>
     <button class="custom-button" onclick="window.location.href='https://sfile.mobi/user.php?files&user=693168'">FREE CONFIG</button>
 </div>
-              <div class="akhir">
+<div class="akhir">
       <p>Made With <a href="https://my.isppaintechidn.cloud">paintechvpn.shop</a></p>
               </div>
+         </div>
       </div>
-      </div>
+        <script>
+        function openShareModal() {
+            document.getElementById("shareModal").style.display = "block";
+        }
+
+        function closeShareModal() {
+            document.getElementById("shareModal").style.display = "none";
+        }
+
+        function copyLink() {
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
+        }
+        </script>
 </body>
 </html>
                               
